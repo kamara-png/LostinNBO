@@ -262,6 +262,43 @@ html[data-theme="dark"] .theme-toggle {
   padding: 0.25rem 0.75rem;
 }
 
+/* ---------- FILTER ---------- */
+
+.shop-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filter-btn {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.7rem;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.filter-btn:hover {
+  background: var(--acid);
+}
+
+.filter-btn[data-active="true"],
+.filter-btn[data-active="true"]:hover {
+  background: var(--ink);
+  color: var(--acid);
+}
+
 /* ---------- PRODUCT GRID ---------- */
 
 .product-grid {
@@ -317,9 +354,21 @@ html[data-theme="dark"] .theme-toggle {
 .product-card-info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0.85rem 1rem 0.5rem;
   gap: 0.5rem;
+}
+
+.product-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.product-card-meta .product-tag {
+  align-self: flex-start;
 }
 
 .product-card-name {
@@ -332,11 +381,6 @@ html[data-theme="dark"] .theme-toggle {
   background: var(--acid);
   border: 2px solid var(--ink);
   padding: 0.15rem 0.5rem;
-}
-
-.product-card > .product-tag {
-  margin: 0 1rem 0.85rem;
-  align-self: flex-start;
 }
 
 .product-card-cta {
@@ -724,6 +768,17 @@ html[data-theme="dark"] .theme-toggle {
     gap: 0.5rem;
   }
 
+  .shop-tools {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .filter-btn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+    min-height: 36px;
+  }
+
   .section-title {
     font-size: 1.8rem;
   }
@@ -747,10 +802,6 @@ html[data-theme="dark"] .theme-toggle {
 
   .product-card-name {
     font-size: 0.8rem;
-  }
-
-  .product-card > .product-tag {
-    margin: 0 0.65rem 0.6rem;
   }
 
   .product-card-cta {

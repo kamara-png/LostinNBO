@@ -1,6 +1,6 @@
 import Marquee from "@/components/Marquee";
-import ProductCard from "@/components/ProductCard";
-import { products, INSTAGRAM_HANDLE } from "@/data/products";
+import ShopSection from "@/components/ShopSection";
+import { INSTAGRAM_HANDLE } from "@/data/products";
 
 export default function Home() {
   return (
@@ -37,17 +37,7 @@ export default function Home() {
 
       <Marquee text="NEW DROP LIVE ★ ORDER VIA INSTAGRAM DM ★ NO CARTS ★ NO RULES" />
 
-      <section id="shop" className="shop">
-        <div className="section-head">
-          <h2 className="section-title">THE DROP</h2>
-          <p className="section-count">{products.length} ITEMS</p>
-        </div>
-        <div className="product-grid">
-          {products.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
-        </div>
-      </section>
+      <ShopSection />
 
       <section className="how">
         <h2 className="section-title">HOW TO ORDER</h2>

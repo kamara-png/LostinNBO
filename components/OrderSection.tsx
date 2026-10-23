@@ -56,7 +56,7 @@ export default function OrderSection({ product }: { product: Product }) {
         rel="noopener noreferrer"
         className="order-btn"
       >
-        ORDER {product.name} ({size}) VIA INSTAGRAM DM ↗
+        ORDER VIA INSTAGRAM DM ↗
       </a>
 
       <div className="copy-box">

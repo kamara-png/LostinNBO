@@ -14,14 +14,18 @@ export default function ProductCard({ product }: { product: Product }) {
         />
       </div>
       <div className="product-card-info">
-        <span className="product-card-name">{product.name}</span>
+        <div className="product-card-meta">
+          <span className="product-card-name">{product.name}</span>
+          {product.tag && (
+            <span
+              className={`product-tag product-tag-${product.tag.toLowerCase()}`}
+            >
+              {product.tag}
+            </span>
+          )}
+        </div>
         <span className="product-card-price">${product.price}</span>
       </div>
-      {product.tag && (
-        <span className={`product-tag product-tag-${product.tag.toLowerCase()}`}>
-          {product.tag}
-        </span>
-      )}
       <div className="product-card-cta">VIEW / ORDER →</div>
     </Link>
   );
