@@ -1,69 +1,74 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Marquee from "@/components/Marquee";
+import ProductCard from "@/components/ProductCard";
+import { products, INSTAGRAM_HANDLE } from "@/data/products";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
+    <>
+      <section className="hero">
+        <div className="hero-inner">
+          <h1 className="hero-title">
+            LOST
+            <br />
+            IN
+            <br />
+            NBO
           </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="hero-sub">
+            STREETWEAR FOR THE OVERSIZED ERA. NO CARTS. NO CHECKOUTS.
+            <br />
+            PICK YOUR PIECE — ORDER STRAIGHT THROUGH INSTAGRAM DM.
           </p>
+          <div className="hero-actions">
+            <a href="#shop" className="btn btn-primary">
+              SHOP THE DROP ↓
+            </a>
+            <a
+              href={`https://ig.me/m/${INSTAGRAM_HANDLE}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost"
+            >
+              DM TO ORDER ↗
+            </a>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <Marquee text="NEW DROP LIVE ★ ORDER VIA INSTAGRAM DM ★ NO CARTS ★ NO RULES" />
+
+      <section id="shop" className="shop">
+        <div className="section-head">
+          <h2 className="section-title">THE DROP</h2>
+          <p className="section-count">{products.length} ITEMS</p>
         </div>
-      </main>
-    </div>
+        <div className="product-grid">
+          {products.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </div>
+      </section>
+
+      <section className="how">
+        <h2 className="section-title">HOW TO ORDER</h2>
+        <div className="steps">
+          <div className="step">
+            <span className="step-num">01</span>
+            <h3>PICK A PIECE</h3>
+            <p>Click any item and select your size.</p>
+          </div>
+          <div className="step">
+            <span className="step-num">02</span>
+            <h3>HIT ORDER</h3>
+            <p>Copy the order message and open the DM.</p>
+          </div>
+          <div className="step">
+            <span className="step-num">03</span>
+            <h3>SEND &amp; FLEX</h3>
+            <p>We confirm, you pay, we ship. Done.</p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
