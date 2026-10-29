@@ -1,9 +1,9 @@
 /**
  * Generates the Apple touch icon from the brand logo.
  *
- * The full illustration is far too detailed for a 16px browser tab, so the tab
- * icon is a simplified mark (app/icon.svg). The home-screen icon has room for
- * the real artwork, so it gets the full logo composited onto the paper colour.
+ * The tab icon (app/icon.svg) is the full logo drawn in white on transparency.
+ * The home-screen icon has room for colour, so it gets the full logo composited
+ * onto the paper colour.
  *
  * Run with: node scripts/gen-icons.cjs
  */
