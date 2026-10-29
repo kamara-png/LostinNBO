@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 import { BRAND_NAME } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: `${BRAND_NAME} — STREETWEAR`,
-  description: `${BRAND_NAME} streetwear merch. Order via Instagram DM.`,
+  title: `${BRAND_NAME} STREETWEAR`,
+  description: `${BRAND_NAME} streetwear merch. Order via Instagram.`,
 };
 
 export const viewport: Viewport = {

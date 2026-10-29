@@ -7,9 +7,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div>
           <h3 className="footer-title">{BRAND_NAME.toUpperCase()}</h3>
-          <p className="footer-tagline">
-            LOST IN THE NOISE. DRESSED FOR IT ANYWAY.
-          </p>
+          <p className="footer-tagline">LOST IN THE NOISE. DRESSED FOR IT.</p>
         </div>
         <div>
           <h3 className="footer-title">ORDER</h3>
@@ -48,7 +46,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 {BRAND_NAME.toUpperCase()}</span>
-        <span>NO REFUNDS. NO RULES.</span>
+        <span>NO REFUNDS</span>
       </div>
     </footer>
   );

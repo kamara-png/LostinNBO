@@ -15,9 +15,9 @@ export default function Home() {
             NBO
           </h1>
           <p className="hero-sub">
-            STREETWEAR FOR THE OVERSIZED ERA. NO CARTS. NO CHECKOUTS.
+            STREETWEAR
             <br />
-            PICK YOUR PIECE — ORDER STRAIGHT THROUGH INSTAGRAM DM.
+            PICK YOUR PIECE
           </p>
           <div className="hero-actions">
             <a href="#shop" className="btn btn-primary">
