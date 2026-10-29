@@ -9,7 +9,7 @@ export type Product = {
   tag?: string;
 };
 
-export const INSTAGRAM_HANDLE = "kamara.zip";
+export const INSTAGRAM_HANDLE = "lostinnbo";
 export const BRAND_NAME = "Lostinnbo";
 
 export const dmLink = `https://ig.me/m/${INSTAGRAM_HANDLE}`;
